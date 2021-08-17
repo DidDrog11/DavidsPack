@@ -1,0 +1,20 @@
+---
+title: "Title of document"
+description: |
+date: "`r Sys.Date()`"
+author: 
+  - first_name: "David"
+    last_name: "Simons"
+    url: https://www.dsimons.org
+    orcid_id: 0000-0001-9655-1656
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+knit: (function(inputFile, encoding) {
+    rmarkdown::render(inputFile, encoding = encoding, output_dir = here::here())
+  })
+always_allow_html: yes
+bibliography: "`r here::here('citations', 'document_citations.bib')`"
+---
